@@ -1,17 +1,17 @@
 <?php
 
 return [
-	'settings.httpVersion' => getenv('SLIM_HTTP_VERSION') ?: '1.1',
+	'settings.httpVersion' => '1.1',
 
-	'settings.responseChunkSize' => getenv('SLIM_RESPONSE_CHUNK_SIZE') ?: 4096,
+	'settings.responseChunkSize' => 4096,
 
-	'settings.outputBuffering' => getenv('SLIM_OUTPUT_BUFFERING') ?: 'append',
+	'settings.outputBuffering' => 'append',
 
-	'settings.determineRouteBeforeAppMiddleware' => getenv('SLIM_DETERMINE_ROUTE_BEFORE_APP_MIDDLEWARE') === 'true' ? true : false,
+	'settings.determineRouteBeforeAppMiddleware' => false,
 
-    'settings.displayErrorDetails' => getenv('SLIM_DISPLAY_ERROR_DETAILS') === 'true' ? true : false,
+    'settings.displayErrorDetails' => true,
 
-	'settings.addContentLengthHeader' => getenv('SLIM_ADD_CONTENT_LENGTH_HEADER') === 'false' ? false : true,
+	'settings.addContentLengthHeader' => true,
 
-	'settings.routerCacheFile' => getenv('SLIM_ROUTER_CACHE') ?:false,
+	'settings.routerCacheFile' => false,
 ];

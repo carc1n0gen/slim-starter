@@ -5,7 +5,7 @@ namespace App\Handlers;
 use Slim\Views\Twig;
 use Psr\Log\LoggerInterface;
 
-class Hello
+class Welcome
 {
     private $view;
     private $logger;
@@ -18,8 +18,7 @@ class Hello
 
     public function __invoke($request, $response)
     {
-        $params = $request->getParsedBody();
-        $this->logger->info("Saying hello to {$params['name']}");
-        return $this->view->render($response, 'hello.twig', ['name' => $params['name']]);
+        $this->logger->info('Logged from the welcome page');
+        return $this->view->render($response, 'welcome.twig');
     }
 }

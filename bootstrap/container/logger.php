@@ -4,8 +4,13 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 return function ($c) {
-    $log = new Logger('app');
-    $log->pushHandler(new StreamHandler(__DIR__.'/../../storage/logs/app.log'));
+    $level = $c->get('settings.logger.logLevel');
 
-    return $log;
+    $logger = new Logger('app');
+    $logger->pushHandler(new StreamHandler(
+        __DIR__.'/../../storage/logs/app.log',
+        Logger::toMonologLevel($level)
+    ));
+
+    return $logger;
 };

@@ -2,7 +2,12 @@
 
 {% block content %}
 <div class="title m-b-md">
-    Hello {{name}}
+    Slim Starter
+
+    <form method="POST">
+        {% include '_csrf.twig' %}
+        <input type="text" name="name" placeholder="What's your name?">
+    </form>
 </div>
 
 <div class="links">
