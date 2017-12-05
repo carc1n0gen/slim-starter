@@ -1,0 +1,22 @@
+{
+    "name": "carc1n0gen/slim-starter",
+    "description": "A starter app for building php applications with the Slim micro framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carson Evans",
+            "email": "carsonwevans@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "php-di/slim-bridge": "^1.1",
+        "slim/twig-view": "^2.3",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
