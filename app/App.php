@@ -12,6 +12,7 @@ class App extends DIApp
     {
         $builder->addDefinitions(__DIR__.'/../config/app.php');
         $builder->addDefinitions(__DIR__.'/../config/logger.php');
+        $builder->addDefinitions(__DIR__.'/../config/views.php');
         $builder->addDefinitions(__DIR__.'/../bootstrap/container/container.php');
     }
 }
