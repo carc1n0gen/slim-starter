@@ -7,15 +7,36 @@ A starter app for building php applications with the Slim micro framework
 - Autowiring with PHP-DI
 - Twig templates
 - Monolog logging
-- Csrf Protection (With a twig extensions)
+- Csrf Protection (With a twig extension)
+- Sessions (with a twig extension)
 
 ## Usage
+
+### Session
+
+Inject the \SlimSession\Helper in to your code and then you can set and get session variables easily.
+
+```php
+use SlimSession\Helper as SessionHelper;
+
+$app->get('/something', function ($request, $response, SessionHelper $session) {
+    $session->someVar = 'Sweet';
+    $message = $session->somVar;
+    ...
+});
+```
+
+There's also a twig extension preloaded which allowes you to easily get session values in your twig views
+
+```html
+<p>{{ session('someVar') }}</p>
+```
 
 ### Csrf
 
 When creating a form you will need to add a hidden token field.  This is taken care of with a simple include:
 
-```
+```html
 <form ...>
 {% include '_csrf.twig' %}
 ...

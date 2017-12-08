@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Twig;
 
 use Slim\Csrf\Guard;
 use Twig\Extension\GlobalsInterface;
@@ -23,7 +23,7 @@ class CsrfExtension extends AbstractExtension implements GlobalsInterface
         $csrfValue = $this->csrf->getTokenValue();
 
         return [
-            'csrf'   => [
+            'csrf' => [
                 'keys' => [
                     'name'  => $csrfNameKey,
                     'value' => $csrfValueKey

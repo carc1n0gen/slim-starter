@@ -24,10 +24,20 @@
                 margin: 0;
             }
 
-            input {
+            input, button {
                 padding: 10px;
-                border: 1px solid #ddd;
+                
                 border-radius: 5px;
+            }
+
+            input {
+                border: 1px solid #ddd;
+            }
+
+            button {
+                border: 1px solid #2e6da4;
+                background-color: #337ab7;
+                color: #fff;
             }
 
             .full-height {
@@ -77,6 +87,13 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 {% block content %}{% endblock %}
+                <div class="links">
+                    <a href="https://www.slimframework.com/docs/">Documentation</a>
+                    <a href="http://discourse.slimframework.com/">Support</a>
+                    <a href="https://www.slimframework.com/blog/">Blog</a>
+                    <a href="https://www.slimframework.com/contribute/">Contributing</a>
+                    <a href="https://github.com/slimphp/Slim">GitHub</a>
+                </div>
             </div>
         </div>
     </body>

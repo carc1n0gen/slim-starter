@@ -1,19 +1,17 @@
 <?php
 
-session_start();
-
 require 'autoload.php';
 
-use Slim\Csrf\Guard;
+use Slim\Middleware\Session;
+use Slim\Csrf\Guard as CsrfGuard;
 
 use App\Handlers;
 
 $app = new App\App;
-
 $container = $app->getContainer();
 
-$app->add($container->get(Guard::class));
-// $app->add( new App\Midlware\ExampleMiddleware );
+$app->add($container->get(CsrfGuard::class));
+$app->add($container->get(Session::class));
 
 $app->get('/', Handlers\Welcome::class);
 
