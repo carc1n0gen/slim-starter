@@ -4,7 +4,7 @@ namespace App\Handlers;
 
 use Slim\Views\Twig;
 
-class NotFound
+class NotFoundHandler
 {
     private $view;
 

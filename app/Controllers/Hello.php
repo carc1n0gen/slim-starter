@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Handlers;
+namespace App\Controllers;
 
 use Slim\Views\Twig;
 use Psr\Log\LoggerInterface;

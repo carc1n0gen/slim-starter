@@ -5,7 +5,7 @@ namespace App\Handlers;
 use Slim\Views\Twig;
 use Psr\Log\LoggerInterface;
 
-class UncaughtException
+class ErrorHandler
 {
     private $view;
     private $logger;
