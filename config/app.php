@@ -9,7 +9,7 @@ return [
 
 	'settings.determineRouteBeforeAppMiddleware' => false,
 
-    'settings.displayErrorDetails' => true,
+    'settings.displayErrorDetails' => false, // Set to true to see debug info (do not do this in production)
 
 	'settings.addContentLengthHeader' => true,
 
