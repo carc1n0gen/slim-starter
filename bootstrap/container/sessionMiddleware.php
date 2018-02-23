@@ -3,9 +3,6 @@
 use Slim\Middleware\Session;
 
 return function ($c) {
-    return new Session([
-        'lifetime' => '20 minutes',
-        'name' => 'slim_session',
-        'autorefresh' => true
-    ]);
+    $config = $c->get('settings.session');
+    return new Session($config);
 };

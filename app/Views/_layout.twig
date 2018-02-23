@@ -20,8 +20,7 @@
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
-                margin: 0;
+                margin: 50px 0 0;
             }
 
             input, button {
@@ -39,35 +38,30 @@
                 background-color: #337ab7;
                 color: #fff;
             }
-
-            .full-height {
-                height: 100vh;
+            
+            pre {
+                overflow-y: scroll;
             }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+            
+            code {
+                text-align: left;
             }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
+            
 
             .title {
                 font-size: 84px;
+                text-align: center;
+            }
+            
+            .content {
+                max-width: 968px;
+                margin: 0 auto;
             }
 
+            .links {
+                text-align: center;
+            }
+            
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -84,16 +78,14 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                {% block content %}{% endblock %}
-                <div class="links">
-                    <a href="https://www.slimframework.com/docs/">Documentation</a>
-                    <a href="http://discourse.slimframework.com/">Support</a>
-                    <a href="https://www.slimframework.com/blog/">Blog</a>
-                    <a href="https://www.slimframework.com/contribute/">Contributing</a>
-                    <a href="https://github.com/slimphp/Slim">GitHub</a>
-                </div>
+        <div class="content">
+            {% block content %}{% endblock %}
+            <div class="links">
+                <a href="https://www.slimframework.com/docs/">Documentation</a>
+                <a href="http://discourse.slimframework.com/">Support</a>
+                <a href="https://www.slimframework.com/blog/">Blog</a>
+                <a href="https://www.slimframework.com/contribute/">Contributing</a>
+                <a href="https://github.com/slimphp/Slim">GitHub</a>
             </div>
         </div>
     </body>

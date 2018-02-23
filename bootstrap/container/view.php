@@ -9,10 +9,10 @@ use App\Twig\CsrfExtension;
 use App\Twig\SessionExtension;
 
 return function ($c) {
-    $cache = $c->get('settings.views.cache');
+    $config = $c->get('settings.views');
     
     $view = new Twig(__DIR__.'/../../app/Views', [
-        'cache' => $cache,
+        'cache' => $config['cachePath']
     ]);
     
     $view->addExtension(new TwigExtension(
