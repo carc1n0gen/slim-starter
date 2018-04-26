@@ -2,7 +2,7 @@
 
 return [
     'settings.logger' => [
-        'logLevel' => 'info',
+        'level' => 'info',
         'file' => __DIR__.'/../storage/logs/app.log',    
     ]
 ];
