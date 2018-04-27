@@ -20,8 +20,19 @@ Inject the \SlimSession\Helper in to your code and then you can set and get sess
 use SlimSession\Helper as SessionHelper;
 
 $app->get('/something', function ($request, $response, SessionHelper $session) {
+    // Three ways to get and set session variables
+
+    // 1
     $session->someVar = 'Sweet';
-    $message = $session->somVar;
+    $message = $session->someVar;
+    
+    // 2
+    $session->set('someVar', 'Sweet');
+    $message = $session->get('someVar');
+
+    // 3
+    $session['someVar'] = 'Sweet';
+    $message = $session['someVar'];
     ...
 });
 ```

@@ -11,6 +11,10 @@ return function ($c) {
         $config['file'],
         Logger::toMonologLevel($config['level'])
     ));
+    $logger->pushHandler(new StreamHandler(
+        'php://stdout',
+        Logger::toMonologLevel($config['level'])
+    ));
 
     return $logger;
 };
