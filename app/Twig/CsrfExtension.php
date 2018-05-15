@@ -8,6 +8,10 @@ use Twig\Extension\AbstractExtension;
 
 class CsrfExtension extends AbstractExtension implements GlobalsInterface
 {
+
+    /**
+     * @var Guard
+     */
     private $csrf;
 
     public function __construct(Guard $csrf)

@@ -8,6 +8,9 @@ use SlimSession\Helper as SessionHelper;
 
 class SessionExtension extends AbstractExtension
 {
+    /**
+     * @var SessionHelper
+     */
     private $session;
     
     public function __construct(SessionHelper $session)

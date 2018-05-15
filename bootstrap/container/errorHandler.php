@@ -6,7 +6,9 @@ use Psr\Log\LoggerInterface;
 use App\Handlers\ErrorHandler;
 
 return function ($c) {
-    $view = $c->get(Twig::class);
-    $logger = $c->get(LoggerInterface::class);
-    return new ErrorHandler($view, $logger, $c);
+    return new ErrorHandler(
+        $c->get(Twig::class),
+        $c->get(LoggerInterface::class),
+        $c->get('settings.displayErrorDetails')
+    );
 };

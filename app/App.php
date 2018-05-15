@@ -5,7 +5,6 @@ namespace App;
 use \DI\ContainerBuilder;
 use \DI\Bridge\Slim\App as DIApp;
 
-
 class App extends DIApp
 {
     protected function configureContainer(ContainerBuilder $builder)

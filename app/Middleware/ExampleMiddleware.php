@@ -1,8 +1,11 @@
 <?php
 
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+
 class ExampleMiddleware
 {
-    public function __invoke($request, $response, $next)
+    public function __invoke(Request $request, Response $response, callable $next)
     {
         $response->getBody()->write('BEFORE');
         $response = $next($request, $response);
