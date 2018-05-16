@@ -14,7 +14,6 @@ $app->add($container->get(CsrfGuard::class));
 $app->add($container->get(Session::class));
 
 $app->get('/', Controllers\Welcome::class);
-
 $app->post('/', Controllers\Hello::class);
 
 return $app;
