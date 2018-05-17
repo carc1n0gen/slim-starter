@@ -8,7 +8,7 @@ use Psr\Container\ContainerInterface;
 
 class LoggerProvider
 {
-	public function create(ContainerInterface $c)
+	public function __invoke(ContainerInterface $c)
 	{
 		$config = $c->get('settings.logger');
 

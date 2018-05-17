@@ -8,7 +8,7 @@ use Psr\Container\ContainerInterface;
 
 class NotFoundProvider
 {
-	public function create(ContainerInterface $c)
+	public function __invoke(ContainerInterface $c)
 	{
 		return new NotFoundHandler($c->get(Twig::class));
 	}

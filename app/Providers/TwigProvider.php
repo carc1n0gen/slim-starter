@@ -12,7 +12,7 @@ use SlimSession\Helper as SessionHelper;
 
 class TwigProvider
 {
-	public function create(ContainerInterface $c)
+	public function __invoke(ContainerInterface $c)
 	{
 		$config = $c->get('settings.views');
     
