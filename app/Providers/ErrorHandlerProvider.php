@@ -9,7 +9,7 @@ use Psr\Container\ContainerInterface;
 
 class ErrorHandlerProvider
 {
-	public function create(ContainerInterface $c)
+	public function __invoke(ContainerInterface $c)
 	{
 		return new ErrorHandler(
 	        $c->get(Twig::class),

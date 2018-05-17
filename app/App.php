@@ -18,13 +18,13 @@ class App extends DIApp
     {
         $builder->addDefinitions(__DIR__.'/../config.php');
         $builder->addDefinitions([
-            'notFoundHandler' => factory([Providers\NotFoundProvider::class, 'create']),
-            'errorHandler' => factory([Providers\ErrorHandlerProvider::class, 'create']),
-            CsrfGuard::class => factory([Providers\CsrfGuardProvider::class, 'create']),
-		    SessionMiddleware::class => factory([Providers\SessionMiddlewareProvider::class, 'create']),
-            SessionHelper::class => factory([Providers\SessionHelperProvider::class, 'create']),
-		    Twig::class => factory([Providers\TwigProvider::class, 'create']),
-		    LoggerInterface::class => factory([Providers\LoggerProvider::class, 'create']),
+            'notFoundHandler' => factory(Providers\NotFoundProvider::class),
+            'errorHandler' => factory(Providers\ErrorHandlerProvider::class),
+            CsrfGuard::class => factory(Providers\CsrfGuardProvider::class),
+		    SessionMiddleware::class => factory(Providers\SessionMiddlewareProvider::class),
+            SessionHelper::class => factory(Providers\SessionHelperProvider::class),
+		    Twig::class => factory(Providers\TwigProvider::class),
+		    LoggerInterface::class => factory(Providers\LoggerProvider::class),
         ]);
     }
 }

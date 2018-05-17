@@ -6,7 +6,7 @@ use Slim\Csrf\Guard as CsrfGuard;
 
 class CsrfGuardProvider
 {
-	public function create()
+	public function __invoke()
 	{
 		return new CsrfGuard();
 	}

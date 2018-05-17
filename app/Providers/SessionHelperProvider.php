@@ -6,7 +6,7 @@ use SlimSession\Helper as SessionHelper;
 
 class SessionHelperProvider
 {
-	public function create()
+	public function __invoke()
 	{
 		return new SessionHelper();
 	}

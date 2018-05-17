@@ -7,7 +7,7 @@ use Slim\Middleware\Session as SessionMiddleware;
 
 class SessionMiddlewareProvider
 {
-	public function create(ContainerInterface $c)
+	public function __invoke(ContainerInterface $c)
 	{
     	return new SessionMiddleware($c->get('settings.session'));
 	}
