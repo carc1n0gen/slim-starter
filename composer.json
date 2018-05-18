@@ -1,7 +1,7 @@
 {
     "name": "carc1n0gen/slim-starter",
     "description": "A starter app for building php applications with the Slim micro framework",
-    "type": "project"
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
