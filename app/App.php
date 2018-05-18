@@ -2,9 +2,9 @@
 
 namespace App;
 
+use DI;
 use App\Providers;
 use Slim\Views\Twig;
-use function DI\factory;
 use DI\ContainerBuilder;
 use Psr\Log\LoggerInterface;
 use DI\Bridge\Slim\App as DIApp;
@@ -18,13 +18,13 @@ class App extends DIApp
     {
         $builder->addDefinitions(__DIR__.'/../config.php');
         $builder->addDefinitions([
-            'notFoundHandler' => factory(Providers\NotFoundProvider::class),
-            'errorHandler' => factory(Providers\ErrorHandlerProvider::class),
-            CsrfGuard::class => factory(Providers\CsrfGuardProvider::class),
-		    SessionMiddleware::class => factory(Providers\SessionMiddlewareProvider::class),
-            SessionHelper::class => factory(Providers\SessionHelperProvider::class),
-		    Twig::class => factory(Providers\TwigProvider::class),
-		    LoggerInterface::class => factory(Providers\LoggerProvider::class),
+            'notFoundHandler' => DI\factory(Providers\NotFoundProvider::class),
+            'errorHandler' => DI\factory(Providers\ErrorHandlerProvider::class),
+            CsrfGuard::class => DI\factory(Providers\CsrfGuardProvider::class),
+		    SessionMiddleware::class => DI\factory(Providers\SessionMiddlewareProvider::class),
+            SessionHelper::class => DI\factory(Providers\SessionHelperProvider::class),
+		    Twig::class => DI\factory(Providers\TwigProvider::class),
+		    LoggerInterface::class => DI\factory(Providers\LoggerProvider::class),
         ]);
     }
 }
